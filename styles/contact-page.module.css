@@ -1,0 +1,341 @@
+.page {
+  width: 100%;
+  overflow: hidden;
+  background: #f1f1f1;
+  color: #212121;
+  font-family: NeueMontreal, Arial, sans-serif;
+}
+
+.hero {
+  padding: clamp(116px, 10.4vw, 204px) clamp(20px, 3.25vw, 64px) 0;
+}
+
+.title {
+  margin: 0;
+  font-family: FoundersGrotesk, sans-serif;
+  font-size: clamp(4rem, 8.3vw, 10rem);
+  font-weight: 600;
+  line-height: .82;
+  letter-spacing: -.018em;
+  text-transform: uppercase;
+}
+
+.titleLine {
+  display: flex;
+  width: max-content;
+  max-width: 100%;
+  align-items: center;
+  gap: .1em;
+  white-space: nowrap;
+}
+
+.titleImage {
+  position: relative;
+  display: block;
+  width: 1.1em;
+  height: .72em;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: .055em;
+  animation: title-image-open .82s cubic-bezier(.86, 0, .07, .995) .85s both;
+}
+
+.titleImage img { object-fit: cover; }
+
+@keyframes title-image-open {
+  from { width: 0; }
+  to { width: 1.1em; }
+}
+
+.form {
+  margin-top: 6.2vw;
+  padding-bottom: clamp(80px, 8vw, 150px);
+}
+
+.formIntro {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: -.02em;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 16px;
+  row-gap: .24em;
+  margin-top: 4.2vw;
+}
+
+.sentence {
+  display: flex;
+  min-width: 0;
+  align-items: baseline;
+  gap: .12em;
+  font-size: clamp(2rem, 3.7vw, 4.4rem);
+  line-height: 1.24;
+  letter-spacing: -.025em;
+}
+
+.sentence > span { flex: 0 0 auto; }
+
+.sentence input,
+.sentence select,
+.sentence textarea {
+  min-width: 0;
+  flex: 1 1 10rem;
+  border: 0;
+  border-bottom: 1px solid #929292;
+  border-radius: 0;
+  outline: 0;
+  padding: 0 .15em .06em;
+  background: transparent;
+  color: #212121;
+  font-family: NeueMontreal, Arial, sans-serif;
+  font-size: clamp(1rem, 1vw, 1.15rem);
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0;
+  text-align: center;
+  transition: border-color .2s ease, border-width .2s ease;
+}
+
+.sentence input:focus,
+.sentence select:focus,
+.sentence textarea:focus { border-bottom: 2px solid #212121; }
+
+.sentence input::placeholder,
+.sentence textarea::placeholder { color: #818181; opacity: 1; }
+
+.sentence input:hover::placeholder,
+.sentence textarea:hover::placeholder { color: #212121; }
+
+.sentence select { appearance: auto; color: #818181; cursor: pointer; }
+.sentence select:hover,
+.sentence select:focus,
+.sentence select:valid { color: #212121; }
+.sentence textarea { resize: vertical; }
+
+.dateControl {
+  position: relative;
+  display: block;
+  min-width: 0;
+  flex: 1 1 10rem;
+}
+
+.sentence .dateInput {
+  display: block;
+  width: 100%;
+  min-height: 1.45em;
+  flex: 0 1 auto;
+  cursor: pointer;
+}
+
+.sentence .dateInputEmpty { color: transparent; }
+.sentence .dateInputEmpty::-webkit-datetime-edit { color: transparent; }
+
+.datePlaceholder {
+  position: absolute;
+  inset: 0 .15em .06em;
+  display: grid;
+  place-items: center;
+  color: #818181;
+  font-size: clamp(1rem, 1vw, 1.15rem);
+  font-weight: 400;
+  letter-spacing: 0;
+  pointer-events: none;
+}
+
+.half { grid-column: span 6; }
+.full { grid-column: 1 / -1; }
+.emailPrefix { grid-column: span 7; }
+.ending { grid-column: span 5; }
+.optional { grid-column: 1 / -1; }
+
+.sentence input:focus-visible,
+.sentence select:focus-visible,
+.sentence textarea:focus-visible { outline: none; border-bottom: 2px solid #212121; }
+
+.submitRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 28px;
+  margin-top: 54px;
+}
+
+.privacyLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.privacyLabel input {
+  width: 25px;
+  height: 25px;
+  flex: 0 0 auto;
+  accent-color: #212121;
+}
+
+.privacyLabel a { text-underline-offset: 2px; }
+
+.submitButton {
+  display: flex;
+  min-width: 248px;
+  height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 30px;
+  background: #212121;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color .25s ease, color .25s ease, transform .25s ease;
+}
+
+.submitButton:disabled { background: #8e8e8e; cursor: not-allowed; }
+.submitButton:not(:disabled):hover { transform: scale(.97); }
+.submitButton:focus-visible { outline: 2px solid #004d43; outline-offset: 4px; }
+
+.status {
+  max-width: 100%;
+  margin: 20px 0 0;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  text-align: right;
+}
+
+.error { color: #b42318; }
+
+.successOverlay {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, .7);
+}
+
+.successModal {
+  position: relative;
+  width: min(426px, 100%);
+  min-height: 190px;
+  border-radius: 20px;
+  padding: 30px 58px 28px 26px;
+  background: #f7f7f7;
+  color: #292929;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, .18);
+}
+
+.successMessage {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.successClose {
+  position: absolute;
+  top: 23px;
+  right: 22px;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #292929;
+  cursor: pointer;
+}
+
+.successClose svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.15;
+}
+
+.successClose:focus-visible { outline: 2px solid #004d43; outline-offset: 3px; }
+
+.successLogo {
+  position: absolute;
+  right: 22px;
+  bottom: 17px;
+  width: 96px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.srOnly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+@media (max-width: 1024px) {
+  .hero { padding-top: 9vh; }
+  .title { font-size: clamp(4rem, 10vw, 7rem); }
+  .formGrid { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .5em 12px; }
+  .sentence { grid-column: 1 / -1; font-size: clamp(1.65rem, 5vw, 3rem); }
+  .half { grid-column: span 3; }
+  .emailPrefix { grid-column: span 4; }
+  .ending { grid-column: span 2; }
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 96px 20px 0; }
+  .title { font-size: clamp(3.15rem, 11vw, 4.5rem); line-height: .9; }
+  .titleLine:first-child { width: 100%; flex-wrap: wrap; white-space: normal; }
+  .titleImage { height: .72em; }
+  .form { margin-top: 78px; padding-bottom: 88px; }
+  .formGrid { display: flex; flex-direction: column; gap: 18px; margin-top: 32px; }
+  .sentence { flex-wrap: wrap; align-items: baseline; gap: .15em .25em; font-size: clamp(1.55rem, 7.1vw, 2.1rem); line-height: 1.22; }
+  .sentence > span { min-width: 0; flex: 1 1 100%; }
+  .half { width: 100%; }
+  .sentence input,
+  .sentence select,
+  .sentence textarea { width: 100%; max-width: 100%; min-height: 2em; flex: 1 1 100%; font-size: 15px; }
+  .dateControl { width: 100%; flex: 1 1 100%; }
+  .sentence .dateInput { width: 100%; min-height: 2em; flex: 1 1 100%; font-size: 15px; }
+  .datePlaceholder { font-size: 15px; }
+  .ending { width: 100%; flex: 1 1 100%; margin-top: -14px; }
+  .optional { display: block; }
+  .optional textarea { display: block; width: 100%; margin-top: 12px; text-align: left; }
+  .submitRow { align-items: flex-start; flex-direction: column; gap: 24px; margin-top: 38px; }
+  .submitButton { width: 100%; }
+  .status { text-align: left; }
+  .successModal { min-height: 174px; padding: 26px 56px 24px 22px; }
+  .successMessage { font-size: 18px; }
+  .successClose { top: 16px; right: 14px; }
+  .successLogo { right: 16px; bottom: 12px; width: 86px; height: 38px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .titleImage { width: 1.1em; animation: none; }
+}
+
+@media (max-width: 400px) {
+  .hero { padding-right: 16px; padding-left: 16px; }
+  .title { font-size: clamp(2.55rem, 12vw, 3.15rem); }
+  .form { margin-top: 58px; }
+  .sentence { font-size: clamp(1.35rem, 7vw, 1.65rem); }
+  .sentence input,
+  .sentence select,
+  .sentence textarea,
+  .sentence .dateInput { font-size: 16px; }
+  .submitButton { min-width: 0; min-height: 58px; }
+  .successModal { padding-right: 48px; padding-left: 18px; }
+  .successMessage { font-size: 16px; }
+  .successLogo { width: 72px; height: 32px; }
+}
+
+@media (max-width: 280px) {
+  .title { font-size: 2.35rem; }
+  .sentence { font-size: 1.25rem; }
+  .submitButton { font-size: 14px; }
+  .successModal { padding-right: 42px; padding-left: 14px; }
+}

@@ -1,0 +1,113 @@
+.scrollSection {
+  position: relative;
+  background: #f2f1ec;
+}
+
+.pinFrame {
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: 92svh;
+  align-items: center;
+  overflow: hidden;
+}
+
+.rail {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 1.25rem;
+  padding-inline: clamp(1.5rem, 9vw, 8rem);
+}
+
+.card {
+  height: min(72svh, 38rem);
+  width: min(82vw, 25rem);
+  --pointer-tilt-x: 0deg;
+  --pointer-tilt-y: 0deg;
+  transform: perspective(1100px) rotateX(var(--pointer-tilt-x)) rotateY(var(--pointer-tilt-y)) rotateZ(var(--rest-tilt, 0deg));
+  transform-style: preserve-3d;
+  transition: transform 560ms cubic-bezier(.2, .75, .25, 1), box-shadow 420ms ease;
+}
+
+.photoFrame {
+  position: relative;
+  height: 100%;
+  max-height: 16rem;
+  width: 54%;
+  overflow: hidden;
+  border-radius: 1.1rem;
+}
+
+.displayFont {
+  font-family: "SliderDisplay", serif;
+}
+
+.copyFont {
+  font-family: "SliderCopy", sans-serif;
+}
+
+.actionFont {
+  font-family: "SliderAction", sans-serif;
+}
+
+.linkedinLink {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  text-decoration: none;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.linkedinLink:hover,
+.linkedinLink:focus-visible {
+  border-color: #0a66c2;
+  background: #0a66c2;
+  color: #fff;
+}
+
+@media (min-width: 769px) {
+  .pinFrame {
+    height: 100vh;
+  }
+
+  .rail {
+    gap: 2.5rem;
+  }
+
+  .card {
+    height: min(80svh, 42rem);
+    width: min(35vw, 28rem);
+  }
+
+  .photoFrame {
+    max-height: 18rem;
+    border-radius: 1.4rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transform: perspective(1100px) rotateX(var(--pointer-tilt-x)) rotateY(var(--pointer-tilt-y)) rotateZ(calc(var(--rest-tilt, 0deg) * .65)) translateY(-6px) scale(1.015);
+    box-shadow: 0 30px 75px -38px rgb(24 24 22 / 42%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition-duration: .01ms;
+    will-change: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .pinFrame { height: 78svh; min-height: 440px; }
+  .rail { gap: .8rem; padding-inline: 1rem; }
+  .card { width: min(84vw, 22rem); height: min(68svh, 34rem); min-height: 400px; padding: 1.15rem; }
+  .photoFrame { width: 48%; max-height: 13rem; border-radius: 1rem; }
+}
+
+@media (max-width: 280px) {
+  .card { width: 82vw; min-height: 370px; padding: .9rem; }
+  .photoFrame { width: 43%; max-height: 11rem; }
+}
