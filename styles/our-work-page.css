@@ -558,7 +558,7 @@
 @media (min-width: 1500px) {
   .our-work-page .work-hero { height: min(746px, 82svh); }
 }
-@media (max-width: 900px), (pointer: coarse) and (max-device-width: 900px) {
+@media (max-width: 900px), (max-device-width: 900px) {
   .our-work-page .work-hero { min-height: 600px; height: 80svh; }
   .our-work-page .hero-title { top: 155px; }
   .our-work-page .eyes-window { top: 358px; width: 90vw; height: 230px; }
@@ -575,7 +575,7 @@
   .our-work-page .case-company-row { grid-template-columns: .8fr 1.6fr; }
   .our-work-page .case-industry { grid-column: 2; }
 }
-@media (max-width: 600px), (pointer: coarse) and (max-device-width: 600px) {
+@media (max-width: 600px), (max-device-width: 600px) {
   .our-work-page .work-hero { height: 680px; min-height: 640px; }
   .our-work-page .hero-title { top: 155px; left: 20px; }
   .our-work-page .hero-title h1 { font-size: clamp(104px, 27vw, 138px); }
@@ -647,7 +647,7 @@
   .our-work-page *, .our-work-page *::before, .our-work-page *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
 
-@media (max-width: 400px), (pointer: coarse) and (max-device-width: 400px) {
+@media (max-width: 400px), (max-device-width: 400px) {
   .our-work-page .work-hero { height: 570px; min-height: 570px; }
   .our-work-page .hero-title { top: 128px; left: 16px; }
   .our-work-page .hero-title h1 { font-size: clamp(82px, 27vw, 104px); }
@@ -669,7 +669,7 @@
   .project-case-page .case-detail-gallery { padding: 10px 10px 48px; }
 }
 
-@media (max-width: 280px), (pointer: coarse) and (max-device-width: 280px) {
+@media (max-width: 280px), (max-device-width: 280px) {
   .our-work-page .hero-title h1 { font-size: 76px; }
   .our-work-page .project-card-bottom { font-size: 13px; }
   .our-work-page .tag-list > span { font-size: 9px; }

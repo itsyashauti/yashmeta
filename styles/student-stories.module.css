@@ -66,7 +66,7 @@
   color: #fff;
 }
 
-@media (min-width: 769px) and (pointer: fine), (min-width: 769px) and (min-device-width: 769px) {
+@media (min-width: 769px) and (min-device-width: 769px) {
   .pinFrame {
     height: 100vh;
   }
@@ -100,14 +100,14 @@
   }
 }
 
-@media (max-width: 400px), (pointer: coarse) and (max-device-width: 400px) {
+@media (max-width: 400px), (max-device-width: 400px) {
   .pinFrame { height: 78svh; min-height: 440px; }
-  .rail { gap: .8rem; padding-inline: 1rem; }
+  .rail { gap: .8rem; padding-inline: 8vw; }
   .card { width: min(84vw, 22rem); height: min(68svh, 34rem); min-height: 400px; padding: 1.15rem; }
   .photoFrame { width: 48%; max-height: 13rem; border-radius: 1rem; }
 }
 
-@media (max-width: 280px), (pointer: coarse) and (max-device-width: 280px) {
+@media (max-width: 280px), (max-device-width: 280px) {
   .card { width: 82vw; min-height: 370px; padding: .9rem; }
   .photoFrame { width: 43%; max-height: 11rem; }
 }

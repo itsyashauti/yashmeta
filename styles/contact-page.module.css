@@ -276,7 +276,7 @@
 
 .srOnly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
-@media (max-width: 1024px), (pointer: coarse) and (max-device-width: 1024px) {
+@media (max-width: 1024px), (max-device-width: 1024px) {
   .hero { padding-top: 9vh; }
   .title { font-size: clamp(4rem, 10vw, 7rem); }
   .formGrid { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .5em 12px; }
@@ -286,7 +286,7 @@
   .ending { grid-column: span 2; }
 }
 
-@media (max-width: 640px), (pointer: coarse) and (max-device-width: 640px) {
+@media (max-width: 640px), (max-device-width: 640px) {
   .hero { padding: 96px 20px 0; }
   .title { font-size: clamp(3.15rem, 11vw, 4.5rem); line-height: .9; }
   .titleLine:first-child { width: 100%; flex-wrap: wrap; white-space: normal; }
@@ -318,7 +318,7 @@
   .titleImage { width: 1.1em; animation: none; }
 }
 
-@media (max-width: 400px), (pointer: coarse) and (max-device-width: 400px) {
+@media (max-width: 400px), (max-device-width: 400px) {
   .hero { padding-right: 16px; padding-left: 16px; }
   .title { font-size: clamp(2.55rem, 12vw, 3.15rem); }
   .form { margin-top: 58px; }
@@ -333,7 +333,7 @@
   .successLogo { width: 72px; height: 32px; }
 }
 
-@media (max-width: 280px), (pointer: coarse) and (max-device-width: 280px) {
+@media (max-width: 280px), (max-device-width: 280px) {
   .title { font-size: 2.35rem; }
   .sentence { font-size: 1.25rem; }
   .submitButton { font-size: 14px; }

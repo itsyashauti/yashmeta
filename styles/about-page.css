@@ -295,8 +295,9 @@
 .about-page .client-story-logo-image { width: auto; max-width: 190px; height: auto; max-height: 82px; object-fit: contain; object-position: left center; }
 .about-page .client-story-name { margin: 0; font-size: 18px; line-height: 1.25; text-decoration: underline; text-underline-offset: 3px; }
 
-@media (max-width: 768px), (pointer: coarse) and (max-device-width: 768px) {
-  .about-page .about-hero-inner { height: clamp(390px, 56svh, 520px); min-height: 0; padding-top: 24px; padding-bottom: 24px; }
+@media (max-width: 768px), (max-device-width: 768px) {
+  .about-page .about-hero-inner { height: clamp(350px, 48svh, 440px); min-height: 0; padding-top: 12px; padding-bottom: 12px; }
+  .about-page .hero-title { font-size: clamp(2.8rem, 9.5vw, 3.6rem); }
   .about-page .about-project-slider { min-height: 690px; padding-top: 48px; padding-bottom: 28px; }
   .about-page .about-project-ticker { height: clamp(150px, 31vw, 238px); }
   .about-page .about-project-ticker-copy { gap: clamp(30px, 7vw, 54px); padding-right: clamp(30px, 7vw, 54px); font-size: clamp(4rem, 20vw, 11rem); letter-spacing: -.02em; }
@@ -319,7 +320,7 @@
   .about-page .client-story-name { font-size: 16px; }
 }
 
-@media (max-width: 480px), (pointer: coarse) and (max-device-width: 480px) {
+@media (max-width: 480px), (max-device-width: 480px) {
   .about-page .client-story-track { grid-template-columns: 1fr; gap: 42px; }
 }
 
@@ -334,7 +335,7 @@
   .about-page .hero-card-reveal { width: .99em; animation: none; }
 }
 
-@media (min-width: 769px) and (max-width: 1100px) and (pointer: fine), (min-width: 769px) and (max-width: 1100px) and (min-device-width: 769px) {
+@media (min-width: 769px) and (max-width: 1100px) and (min-device-width: 769px) {
   .about-page .about-hero-inner { height: 72svh; min-height: 540px; }
   .about-page .about-project-slider { min-height: 0; padding-top: 76px; padding-bottom: 44px; }
   .about-page .about-project-ticker { height: clamp(160px, 22vw, 230px); }
@@ -345,10 +346,10 @@
   .about-page .client-story-track { gap: 28px; padding-inline: 28px; }
 }
 
-@media (max-width: 400px), (pointer: coarse) and (max-device-width: 400px) {
-  .about-page .about-hero-inner { height: clamp(350px, 52svh, 450px); min-height: 0; padding-top: 20px; padding-bottom: 20px; }
+@media (max-width: 400px), (max-device-width: 400px) {
+  .about-page .about-hero-inner { height: clamp(320px, 44svh, 390px); min-height: 0; padding-top: 10px; padding-bottom: 10px; }
   .about-page .about-title-second-line { width: 100%; flex-wrap: wrap; white-space: normal; }
-  .about-page .hero-title { font-size: clamp(2.25rem, 10.2vw, 2.7rem); }
+  .about-page .hero-title { font-size: clamp(2.9rem, 12.8vw, 3.35rem); }
   .about-page .about-project-slider { min-height: 0; padding: 34px 0 24px; }
   .about-page .about-project-ticker { height: 128px; }
   .about-page .about-project-stage { height: 330px; margin-top: 30px; }

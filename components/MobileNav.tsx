@@ -28,7 +28,7 @@ export default function MobileNav() {
                     transition={{duration: 0.38, ease: [0.3, 0, 0.36, 0.95]}}
                     className = "fixed inset-0 z-50 flex min-h-[100svh] w-full flex-col bg-secondary pb-[env(safe-area-inset-bottom)]">
                     <div className="flex h-[8vh] min-h-[56px] w-full shrink-0 items-center justify-between border-b border-[#f1f1f155] px-5">
-                        <Link href={"/"}>
+                        <Link href="/" onClick={() => setToggle(false)} aria-label="Go to metaruleX home">
                             <Image src="/metarulex-logo-light.png" alt="metaruleX" width={145} height={52} className="h-auto w-[118px]" />
                         </Link>
                         <button type="button" onClick={() => setToggle(false)} className="grid h-11 w-11 place-items-center text-background" aria-label="Close navigation menu">

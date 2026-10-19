@@ -23,16 +23,16 @@ export default function Hero() {
                                     animate={{ width: "auto" }}
                                     transition={{
                                         ease: [0.86, 0, 0.07, 0.995],
-                                        duration: 1,
-                                        delay: 1.5,
+                                        duration: 0.8,
+                                        delay: 1.1,
                                     }}
-                                    className="home-hero-image-slot inline-block leading-[130px]">
+                                    className="home-hero-image-slot inline-block overflow-hidden leading-[0]">
                                     <Image
                                         width={120}
                                         height={50}
                                         src={ochiside}
                                         alt=""
-                                        className="w-auto h-[95px] lg:w-auto lg:h-auto md:w-[100px] md:h-[63px] sm:w-[74px] sm:h-[45px] xm:w-[64px] xm:h-[40px] xl:w-[173px] xl:h-[112px] object-cover xl:mt-[15px] mt-[10px] rounded-[10px] " />
+                                        className="w-auto h-[95px] lg:w-auto lg:h-auto md:w-[100px] md:h-[63px] sm:w-[77px] sm:h-[45px] xm:w-[68px] xm:h-[40px] xl:w-[173px] xl:h-[112px] object-contain xl:mt-[15px] mt-[10px] rounded-[12px] " />
                                 </motion.span>
 
                                 <h1 className="heading home-hero-thought tracking-[-1.3px] text-[#212121] font-semibold font-FoundersGrotesk uppercase">

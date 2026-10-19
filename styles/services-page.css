@@ -627,7 +627,7 @@
   .services-page .client-type p { font-size: 20px; }
 }
 
-@media (max-width: 850px), (pointer: coarse) and (max-device-width: 850px) {
+@media (max-width: 850px), (max-device-width: 850px) {
   .services-page .services-header { grid-template-columns: 1fr auto; height: 70px; padding: 0 24px; }
   .services-page .services-wordmark { font-size: 30px; }
   .services-page .services-navigation { grid-column: 1 / -1; grid-row: 2; justify-content: space-between; width: 100%; gap: 14px; padding: 12px 0 15px; font-size: 14px; }
@@ -680,7 +680,7 @@
   .services-page .stats-value { font-size: clamp(42px, 7vw, 60px); }
 }
 
-@media (max-width: 560px), (pointer: coarse) and (max-device-width: 560px) {
+@media (max-width: 560px), (max-device-width: 560px) {
   .services-page .stats-section { padding: 20px 20px 85px; }
   .services-page .stats-grid { gap: 12px; }
   .services-page .stats-card { min-height: 170px; border-radius: 10px; padding: 16px; }
@@ -829,7 +829,7 @@
   outline-offset: 5px;
 }
 
-@media (max-width: 850px), (pointer: coarse) and (max-device-width: 850px) {
+@media (max-width: 850px), (max-device-width: 850px) {
   .services-page .key-advantages-section { padding-top: 48px; }
   .services-page .key-advantages-ticker { height: clamp(150px, 31vw, 238px); }
   .services-page .key-advantages-ticker-copy { gap: clamp(30px, 7vw, 54px); padding-right: clamp(30px, 7vw, 54px); font-size: clamp(4rem, 20vw, 11rem); letter-spacing: -.02em; }
@@ -839,7 +839,7 @@
   .services-page .key-advantage-number { font-size: clamp(42px, 7vw, 60px); }
 }
 
-@media (max-width: 560px), (pointer: coarse) and (max-device-width: 560px) {
+@media (max-width: 560px), (max-device-width: 560px) {
   .services-page .key-advantages-section { padding-top: 34px; }
   .services-page .key-advantages-ticker { height: 150px; }
   .services-page .key-advantages-ticker-copy { font-size: clamp(4rem, 20vw, 6rem); }
@@ -859,7 +859,7 @@
   .key-advantage-toggle { transition-duration: .01ms; }
 }
 
-@media (max-width: 560px), (pointer: coarse) and (max-device-width: 560px) {
+@media (max-width: 560px), (max-device-width: 560px) {
   .services-page .services-header { padding: 0 20px; }
   .services-page .services-navigation { gap: 9px; font-size: 12px; }
   .services-page .services-contact-link { font-size: 13px; }
@@ -910,7 +910,7 @@
   .services-page .client-review-story p { font-size: 15px; }
 }
 
-@media (max-width: 400px), (pointer: coarse) and (max-device-width: 400px) {
+@media (max-width: 400px), (max-device-width: 400px) {
   .services-page { padding-top: 6vh; }
   .services-page .services-title-section { min-height: 205px; padding: 66px 16px 40px; }
   .services-page .services-title { font-size: clamp(58px, 16vw, 68px); }
