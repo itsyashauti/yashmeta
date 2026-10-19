@@ -22,11 +22,11 @@ const config: Config = {
       NeueMontreal: ["NeueMontreal", "sans-serif"],
     },
     screens: {
-      xm: { max: "400px" },
-      sm: { min: "401px", max: "768px" },
-      md: { min: "769px" },
-      lg: { min: "1025px", max: "1490px" },
-      xl: { min: "1491px" },
+      xm: { raw: "(max-width: 400px), (pointer: coarse) and (max-device-width: 400px)" },
+      sm: { raw: "(min-width: 401px) and (max-width: 768px), (pointer: coarse) and (min-device-width: 401px) and (max-device-width: 768px)" },
+      md: { raw: "(min-width: 769px) and (pointer: fine), (min-width: 769px) and (min-device-width: 769px)" },
+      lg: { raw: "(min-width: 1025px) and (max-width: 1490px) and (pointer: fine), (min-width: 1025px) and (max-width: 1490px) and (min-device-width: 1491px)" },
+      xl: { raw: "(min-width: 1491px) and (pointer: fine), (min-width: 1491px) and (min-device-width: 1491px)" },
     }
   },
   plugins: [],

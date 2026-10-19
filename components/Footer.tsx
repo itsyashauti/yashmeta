@@ -82,7 +82,7 @@ export default function Footer() {
 							</h1>
 							<LinkHover
 								title="metarulex@gmail.com"
-								href="/"
+								href="mailto:metarulex@gmail.com"
 								className="before:h-[1px] after:h-[1px] paragraph font-medium before:bottom-[-3px] after:bottom-[-3px] transition-colors duration-300 hover:text-[#cdea68]"
 							/>
 						</div>

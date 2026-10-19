@@ -92,7 +92,7 @@ export default function About() {
                                             key={item.id}
                                             className="w-fit sub-paragraph font-medium capitlize before:h-[1px] after:h-[1px] before:bottom-[1px] after:bottom-[1px]"
                                             title={item.title}
-                                            href={"/"} />
+                                            href={item.href} />
                                     ))}
                                 </div>
                             </div>

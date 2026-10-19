@@ -193,7 +193,7 @@ button {
 	overflow-wrap: anywhere;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px), (pointer: coarse) and (max-device-width: 1024px) {
 	.site-footer-top {
 		flex-direction: column;
 		gap: clamp(36px, 6vw, 64px);
@@ -221,7 +221,7 @@ button {
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 400px), (pointer: coarse) and (max-device-width: 400px) {
 	.site-footer {
 		padding-top: 24px;
 	}
@@ -260,13 +260,13 @@ button {
 	}
 }
 
-@media (min-width: 401px) and (max-width: 768px) {
+@media (min-width: 401px) and (max-width: 768px), (pointer: coarse) and (min-device-width: 401px) and (max-device-width: 768px) {
 	.home-hero-title {
 		font-size: clamp(2.4rem, 8vw, 4rem);
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (pointer: coarse) and (max-device-width: 768px) {
 	.home-hero-title,
 	.home-hero-thought {
 		font-family: NeueMontreal, Arial, sans-serif;
@@ -276,7 +276,7 @@ button {
 	}
 }
 
-@media (max-width: 360px) {
+@media (max-width: 360px), (pointer: coarse) and (max-device-width: 360px) {
 	.site-footer {
 		padding-inline: 16px;
 	}
@@ -290,13 +290,25 @@ button {
 	}
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px), (pointer: coarse) and (max-device-width: 900px) {
 	.site-desktop-nav { display: none !important; }
 	.site-mobile-nav { display: flex !important; }
 }
 
-@media (max-width: 640px) {
-	.home-hero { padding-top: env(safe-area-inset-top); }
+@media (max-width: 640px), (pointer: coarse) and (max-device-width: 640px) {
+	.home-hero { min-height: auto; padding-top: env(safe-area-inset-top); }
+	.home-hero > div:first-child {
+		flex: 0 0 auto;
+		min-height: 48svh;
+		padding-top: 0;
+	}
+	.home-hero > div:nth-child(2) {
+		height: auto;
+		min-height: 0;
+		gap: 18px;
+		margin-bottom: 18px;
+		padding-block: 18px;
+	}
 	.site-mobile-nav { padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
 }
 
