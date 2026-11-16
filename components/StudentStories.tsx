@@ -70,15 +70,6 @@ const stories: TeamStory[] = [
     accent: false,
   },
   {
-    initial: "A",
-    name: "Anushka",
-    image: "/Anushka.webp",
-    description: "Building AI/ML solutions, developing predictive models, and transforming complex data into meaningful insights and smarter digital experiences.",
-    linkedin: "https://www.linkedin.com/in/anushka-chaturvedi-432a5625a",
-    tilt: "2deg",
-    accent: false,
-  },
-  {
     initial: "H",
     name: "Harshda",
     image: "/Harshda.webp",
